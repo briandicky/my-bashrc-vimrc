@@ -1,10 +1,8 @@
+" Settings for interface optimization
 set nu
 set ai
-set tabstop=4
-set shiftwidth=4
 set bg=dark
 set cursorline
-
 set ruler
 set expandtab
 syntax on
@@ -13,6 +11,10 @@ syntax on
 filetype on
 filetype plugin on
 filetype indent on
+
+" For normal file, expand tabs to spaces.
+set tabstop=4
+set shiftwidth=4
 
 " in makefiles, don't expand tabs to spaces, since actual tab characters are
 " needed, and have indentation at 8 chars to be sure that all indents are tabs
