@@ -4,6 +4,9 @@
 " Purpose:  This is my own vimrc settings.
 " =============================================
 
+" =============================================
+" Normal settings
+" =============================================
 " Settings for interface optimization
 set nu
 set ai
@@ -27,7 +30,9 @@ set shiftwidth=4
 " (despite the mappings later):
 autocmd FileType Makefile set noexpandtab shiftwidth=8 softtabstop=0
 autocmd FileType makefile set noexpandtab shiftwidth=8 softtabstop=0
-
+" =============================================
+" End of normal settins
+" =============================================
 
 " =============================================
 "   Start vundle
@@ -48,6 +53,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'L9'
 
 " =============================================
 " Run vundle
@@ -60,3 +67,8 @@ filetype plugin indent on
 
 " set a global var to be the entry point of YCM for all code
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+
+" status line
+set laststatus=2
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
