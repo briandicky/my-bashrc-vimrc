@@ -54,6 +54,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
 Plugin 'L9'
 
 " =============================================
@@ -65,10 +66,22 @@ filetype plugin indent on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
+" settins for YCM
 " set a global var to be the entry point of YCM for all code
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
-" status line
+" settings for Powerline
 set laststatus=2
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
+
+" settings for Nerdtree
+" F2 to open/close nerd tree 
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeChDirMode=1
+" show bookmark
+let NERDTreeShowBookmarks=1
+" ignore document type
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+" window size
+let NERDTreeWinSize=25
