@@ -56,6 +56,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/taglist.vim'
 Plugin 'L9'
 
 " =============================================
@@ -67,20 +68,26 @@ filetype plugin indent on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
+"""""""""""""""""""""""""" 
 " settins for YCM
+"""""""""""""""""""""""""" 
 " set a global var to be the entry point of YCM for all code
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
+""""""""""""""""""""""""""
 " settings for vim-airline
+""""""""""""""""""""""""""
 set laststatus=2
 set t_Co=256
 set encoding=utf-8
 let g:airline_powerline_fonts=1
-"let g:airline_theme="luna"
+let g:airline_theme="simple"
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 
+""""""""""""""""""""""""""
 " settings for Nerdtree
+""""""""""""""""""""""""""
 " F2 to open/close nerd tree 
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeChDirMode=1
@@ -90,3 +97,19 @@ let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " window size
 let NERDTreeWinSize=25
+
+""""""""""""""""""""""""""
+" settings for Taglist
+""""""""""""""""""""""""""
+" F3 to open/close tag list
+map <F3> :TlistToggle<CR>
+" only show the current file tag
+let Tlist_Show_One_File=1
+" close vim, if taglist window is the last window
+let Tlist_Exit_OnlyWindow=1
+" show taglist at right hand side
+let Tlist_Use_Right_Window=1
+" Jump to taglist window on open
+let Tlist_GainFocus_On_ToggleOpen=1 
+" taglist window size
+let Tlist_WinWidth=35
