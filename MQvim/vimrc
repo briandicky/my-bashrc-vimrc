@@ -53,8 +53,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'L9'
 
 " =============================================
@@ -70,10 +71,14 @@ filetype plugin indent on
 " set a global var to be the entry point of YCM for all code
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
-" settings for Powerline
+" settings for vim-airline
 set laststatus=2
 set t_Co=256
-let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+let g:airline_powerline_fonts=1
+"let g:airline_theme="luna"
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " settings for Nerdtree
 " F2 to open/close nerd tree 
