@@ -1,7 +1,8 @@
 #Vimrc guidelines
 This document briefly describe how to install plugin in vim environment.
 
-##Vundle, the plug-in manager for Vim
+
+##(From Vundle.vim)Vundle, the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
 * keep track of and [configure] your plugins right in the `.vimrc`
