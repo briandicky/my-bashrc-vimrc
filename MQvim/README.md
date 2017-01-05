@@ -103,34 +103,35 @@ You can see the version of Vim installed by running this.
     ``` 
 If the version is too old, you may need to compile Vim from source.
 
-Now, install YouCompleteMe with Vundle, adding this in your vimrc's Vundle plugins.
+2. Now, install YouCompleteMe with Vundle, adding this in your vimrc's Vundle plugins.
     ```
     Plugin 'Valloric/YouCompleteMe'
     ```
-Then install the plugins.
+3. Then install the plugins.
     ```
     vim
     :PluginInstall
     ```
 
-Install development tools and CMake.
+4. Install development tools and CMake.
     ```
     sudo apt-get install build-essential cmake
     ```
 
-Make sure you have Python headers installed.
+5. Make sure you have Python headers installed.
     ```
     sudo apt-get install python-dev python3-dev
     ```
 
-Compiling YCM with semantic support for C-family languages:
+6. Compiling YCM with semantic support for C-family languages:
     ```
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
     ```
 
-Compiling YCM without semantic support for C-family languages:
+    Compiling YCM without semantic support for C-family languages:
     ```
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py
     ```
+
