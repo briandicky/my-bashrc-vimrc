@@ -26,17 +26,17 @@ touch .vimrc
 
 ###How to install Vundle
 1. create the directory if you did not create it before.
-```
-cd ~
-mkdir .vim
-cd .vim
-mkdir bundle
-```
+    ```
+    cd ~
+    mkdir .vim
+    cd .vim
+    mkdir bundle
+    ```
 
 2. use git to clone the vundle source code form github.
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
+    ```
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    ```
 
 3. configure plugins:
 Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't need, they are for illustration purposes.
