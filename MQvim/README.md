@@ -2,7 +2,7 @@
 This document briefly describe how to install plugin in vim environment.
 
 
-##(From Vundle.vim)Vundle, the plug-in manager for Vim
+##(From Vundle.vim) Vundle, the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
 * keep track of and [configure] your plugins right in the `.vimrc`
@@ -89,3 +89,48 @@ filetype plugin indent on    " required
 Launch vim and run `:PluginInstall`
 To install from command line: `vim +PluginInstall +qall`
 
+##YouCompleteMe, a code-completion engine for Vim
+YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
+Please refer to the full Installation Guide below, however, the following commands are provided on my own experience and may not work for you.
+
+###For Ubuntu Linux x64
+1. environment:
+Make sure you have Vim 7.4.143 with Python 2 or Python 3 support.
+Ubuntu 14.10 and later version should have a Vim that's recent enough.
+You can see the version of Vim installed by running this.
+```
+vim --version
+``` 
+If the version is too old, you may need to compile Vim from source.
+
+Now, install YouCompleteMe with Vundle, adding this in your vimrc's Vundle plugins.
+```
+Plugin 'Valloric/YouCompleteMe'
+```
+Then install the plugins.
+```
+vim
+:PluginInstall
+```
+
+Install development tools and CMake.
+```
+sudo apt-get install build-essential cmake
+```
+
+Make sure you have Python headers installed.
+```
+sudo apt-get install python-dev python3-dev
+```
+
+Compiling YCM with semantic support for C-family languages:
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+```
+
+Compiling YCM without semantic support for C-family languages:
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
+```
