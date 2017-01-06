@@ -134,4 +134,9 @@ If the version is too old, you may need to compile Vim from source.
     cd ~/.vim/bundle/YouCompleteMe
     ./install.py
     ```
-
+7. configuration in my vimrc
+Before we start to use YouCompleteMe, we need to set a global variable to be the entry point of YCM for all code. So we need to add this in your vimrc.
+    ```
+    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+    ```
+    After you set this global variable to be the enyrt point for YCM, it will work successfully.
