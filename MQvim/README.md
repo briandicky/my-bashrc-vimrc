@@ -1,7 +1,6 @@
 #Vimrc guidelines
 This document briefly describe how to install plugin in vim environment.
 
-
 ##(From Vundle.vim) Vundle, the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
@@ -155,8 +154,14 @@ If you want to install the themes as you would this plugin ([Vundle themes][1])
 Plugin 'vim-airline/vim-airline-themes'
 ```
 
-Below is my vim-airline settings.
+Then open your vim editor, and type this
 ```
+:PlginInstall
+```
+
+###Settings
+Below is my vim-airline settings.
+```vim
 " set status line
 set laststatus=2
 " set colors
@@ -177,5 +182,55 @@ let g:airline_theme="simple"
 " show buffer number
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 ```
+
+##NERDTree, a tree explorer plugin for vim
+The NERD tree allows you to explore your filesystem and to open files and directories.
+
+###Installaltion
+For Vundle manager, we install main tool by typing
+```
+Plugin 'scrooloose/nerdtree'
+```
+
+###Settings
+Below is my NERDtree settings.
+```vim
+" F2 to open/close nerd tree 
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeChDirMode=1
+" show bookmark
+let NERDTreeShowBookmarks=1
+" ignore document type
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+" window size
+let NERDTreeWinSize=25
+```
+
+##TagList, source code browser
+The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.
+
+###Installation
+For Vundle manager, we install main tool by typing
+```
+Plugin 'vim-scripts/taglist.vim'
+```
+
+###Settings
+Below is my TagList settings.
+```vim
+" F3 to open/close tag list
+map <F3> :TlistToggle<CR>
+" only show the current file tag
+let Tlist_Show_One_File=1
+" close vim, if taglist window is the last window
+let Tlist_Exit_OnlyWindow=1
+" show taglist at right hand side
+let Tlist_Use_Right_Window=1
+" Jump to taglist window on open
+let Tlist_GainFocus_On_ToggleOpen=1 
+" taglist window size
+let Tlist_WinWidth=35
+```
+
 
 [1]: https://github.com/vim-airline/vim-airline-themes
