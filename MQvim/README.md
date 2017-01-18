@@ -1,7 +1,7 @@
 #Vimrc guidelines
 This document briefly describe how to install plugin in vim environment.
 
-##(From Vundle.vim) Vundle, the plug-in manager for Vim
+##Vundle[2], the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
 * keep track of and [configure] your plugins right in the `.vimrc`
@@ -88,7 +88,7 @@ Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't nee
 Launch vim and run `:PluginInstall`
 To install from command line: `vim +PluginInstall +qall`
 
-##YouCompleteMe, a code-completion engine for Vim
+##YouCompleteMe[3], a code-completion engine for Vim
 YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
 Please refer to the full Installation Guide below, however, the following commands are provided on my own experience and may not work for you.
 
@@ -140,7 +140,7 @@ Before we start to use YouCompleteMe, we need to set a global variable to be the
     ```
 After you set this global variable to be the enyrt point for YCM, it will work successfully.
 
-##Vim-airline, status/tabline for vim
+##Vim-airline[4], status/tabline for vim
 Lean & mean status/tabline for vim that's light as air.
 
 ###Installation
@@ -183,7 +183,7 @@ let g:airline_theme="simple"
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 ```
 
-##NERDTree, a tree explorer plugin for vim
+##NERDTree[5], a tree explorer plugin for vim
 The NERD tree allows you to explore your filesystem and to open files and directories.
 
 ###Installaltion
@@ -206,7 +206,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
 ```
 
-##TagList, source code browser
+##TagList[6], source code browser
 The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.
 
 ###Installation
@@ -234,3 +234,8 @@ let Tlist_WinWidth=35
 
 
 [1]: https://github.com/vim-airline/vim-airline-themes
+[2]: https://github.com/VundleVim/Vundle.vim
+[3]: https://github.com/Valloric/YouCompleteMe
+[4]: https://github.com/vim-airline/vim-airline
+[5]: https://github.com/scrooloose/nerdtree
+[6]: https://github.com/vim-scripts/taglist.vim
