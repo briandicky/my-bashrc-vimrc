@@ -30,12 +30,29 @@ set shiftwidth=4
 " (despite the mappings later):
 autocmd FileType Makefile set noexpandtab shiftwidth=8 softtabstop=0
 autocmd FileType makefile set noexpandtab shiftwidth=8 softtabstop=0
+
+" For *.tex files, do not set autoindent off.
+autocmd BufRead *.tex set noautoindent
+
+" For *.tex, *.md, and *.txt files, open spell checker automatically
+if has("spell")
+  " turn spelling on by default
+  autocmd BufRead *.txt,*.md,*.tex set spell
+  " set spell
+
+  " toggle spelling with F4 key
+  " map <F4> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+
+  " they were using white on white
+  highlight PmenuSel ctermfg=black ctermbg=lightgray
+
+  " limit it to just the top 10 items
+  " set sps=best,10                    
+endif
 " =============================================
 " End of normal settins
 " =============================================
 
-" in tex files, do not set autoindent off.
-autocmd FileType tex set noautoindent
 
 " =============================================
 "   Start vundle
