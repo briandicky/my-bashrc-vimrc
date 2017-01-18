@@ -80,14 +80,26 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extr
 """"""""""""""""""""""""""
 " settings for vim-airline
 """"""""""""""""""""""""""
+" set status line
 set laststatus=2
+" set colors
 set t_Co=256
+" set endoing format
 set encoding=utf-8
+" enable powerline-fonts
+" set fonts size
 let g:airline_powerline_fonts=1
+" set vim-airline theme
 let g:airline_theme="simple"
+" enable tabline
 "let g:airline#extensions#tabline#enabled = 1
+" set left separator
+"let g:airline#extensions#tabline#left_sep = ' '
+" set left separator which are not editting
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+" show buffer number
 "let g:airline#extensions#tabline#buffer_nr_show = 1
-
+"
 """"""""""""""""""""""""""
 " settings for Nerdtree
 """"""""""""""""""""""""""

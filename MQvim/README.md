@@ -149,7 +149,33 @@ For Vundle manager, we install main tool by typing
 ```
 Plugin 'vim-airline/vim-airline'
 ```
-If you want to install the themes as you would this plugin ([Vundle themes][1])
 
+If you want to install the themes as you would this plugin ([Vundle themes][1])
+```
+Plugin 'vim-airline/vim-airline-themes'
+```
+
+Below is my vim-airline settings.
+```
+" set status line
+set laststatus=2
+" set colors
+set t_Co=256
+" set endoing format
+set encoding=utf-8
+" enable powerline-fonts
+" set fonts size
+let g:airline_powerline_fonts=1
+" set vim-airline theme
+let g:airline_theme="simple"
+" enable tabline
+"let g:airline#extensions#tabline#enabled = 1
+" set left separator
+"let g:airline#extensions#tabline#left_sep = ' '
+" set left separator which are not editting
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+" show buffer number
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+```
 
 [1]: https://github.com/vim-airline/vim-airline-themes
