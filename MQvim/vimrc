@@ -34,6 +34,9 @@ autocmd FileType makefile set noexpandtab shiftwidth=8 softtabstop=0
 " End of normal settins
 " =============================================
 
+" in tex files, do not set autoindent off.
+autocmd FileType tex set noautoindent
+
 " =============================================
 "   Start vundle
 " =============================================

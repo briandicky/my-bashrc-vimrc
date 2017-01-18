@@ -141,3 +141,15 @@ Before we start to use YouCompleteMe, we need to set a global variable to be the
     ```
 After you set this global variable to be the enyrt point for YCM, it will work successfully.
 
+##Vim-airline, status/tabline for vim
+Lean & mean status/tabline for vim that's light as air.
+
+###Installation
+For Vundle manager, we install main tool by typing
+```
+Plugin 'vim-airline/vim-airline'
+```
+If you want to install the themes as you would this plugin ([Vundle themes][1])
+
+
+[1]: https://github.com/vim-airline/vim-airline-themes
