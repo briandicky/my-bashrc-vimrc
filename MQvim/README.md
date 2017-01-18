@@ -1,7 +1,7 @@
 #Vimrc guidelines
 This document briefly describe how to install plugin in vim environment.
 
-##Vundle[2], the plug-in manager for Vim
+##[Vundle][2], the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
 * keep track of and [configure] your plugins right in the `.vimrc`
@@ -88,7 +88,7 @@ Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't nee
 Launch vim and run `:PluginInstall`
 To install from command line: `vim +PluginInstall +qall`
 
-##YouCompleteMe[3], a code-completion engine for Vim
+##[YouCompleteMe][3], a code-completion engine for Vim
 YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
 Please refer to the full Installation Guide below, however, the following commands are provided on my own experience and may not work for you.
 
@@ -140,7 +140,7 @@ Before we start to use YouCompleteMe, we need to set a global variable to be the
     ```
 After you set this global variable to be the enyrt point for YCM, it will work successfully.
 
-##Vim-airline[4], status/tabline for vim
+##[Vim-airline][4], status/tabline for vim
 Lean & mean status/tabline for vim that's light as air.
 
 ###Installation
@@ -154,10 +154,7 @@ If you want to install the themes as you would this plugin ([Vundle themes][1])
 Plugin 'vim-airline/vim-airline-themes'
 ```
 
-Then open your vim editor, and type this
-```
-:PlginInstall
-```
+Then, launch vim and run `:PluginInstall`.
 
 ###Settings
 Below is my vim-airline settings.
@@ -183,7 +180,7 @@ let g:airline_theme="simple"
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 ```
 
-##NERDTree[5], a tree explorer plugin for vim
+##[NERDTree][5], a tree explorer plugin for vim
 The NERD tree allows you to explore your filesystem and to open files and directories.
 
 ###Installaltion
@@ -191,6 +188,8 @@ For Vundle manager, we install main tool by typing
 ```
 Plugin 'scrooloose/nerdtree'
 ```
+
+Then, launch vim and run `:PluginInstall`.
 
 ###Settings
 Below is my NERDtree settings.
@@ -206,7 +205,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
 ```
 
-##TagList[6], source code browser
+##[TagList][6], source code browser
 The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.
 
 ###Installation
@@ -214,6 +213,8 @@ For Vundle manager, we install main tool by typing
 ```
 Plugin 'vim-scripts/taglist.vim'
 ```
+
+Then, launch vim and run `:PluginInstall`.
 
 ###Settings
 Below is my TagList settings.
