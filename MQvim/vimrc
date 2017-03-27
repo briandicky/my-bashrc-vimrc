@@ -32,7 +32,8 @@ autocmd FileType Makefile set noexpandtab shiftwidth=8 softtabstop=0
 autocmd FileType makefile set noexpandtab shiftwidth=8 softtabstop=0
 
 " For *.tex files, do not set autoindent off.
-autocmd BufRead *.tex set noautoindent
+autocmd BufRead *.tex set noautoindent nocindent nosmartindent indentexpr=
+autocmd BufRead *.tex nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
 " For *.tex, *.md, and *.txt files, open spell checker automatically
 if has("spell")
