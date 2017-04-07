@@ -4,10 +4,10 @@ This document briefly describe how to install plugin in vim environment.
 ## [Vundle][2], the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
-* keep track of and [configure] your plugins right in the `.vimrc`
+* keep track of and configure your plugins right in the `.vimrc`
 * install configured plugins (a.k.a. scripts/bundle)
 * update configured plugins
-* search by name all available [Vim scripts]
+* search by name all available Vim scripts
 * clean unused plugins up
 * run the above actions in a *single keypress* with interactive mode
 
@@ -205,32 +205,30 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
 ```
 
-## [TagList][6], source code browser
-The "Tag List" plugin is a source code browser plugin for Vim and provides an overview of the structure of source code files and allows you to efficiently browse through source code files for different programming languages.
+## [Tagbar][6], a class outline viewer for Vim
+Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure.
+It does this by creating a sidebar that displays the ctags-generated tags of the current file, ordered by their scope.
 
 ### Installation
 For Vundle manager, we install main tool by typing
 ```
-Plugin 'vim-scripts/taglist.vim'
+Plugin 'majutsushi/tagbar'
 ```
 
 Then, launch vim and run `:PluginInstall`.
 
 ### Settings
-Below is my TagList settings.
+Below is my Tagbar settings, more details you can find [here][7].
 ```vim
-" F3 to open/close tag list
-map <F3> :TlistToggle<CR>
-" only show the current file tag
-let Tlist_Show_One_File=1
-" close vim, if taglist window is the last window
-let Tlist_Exit_OnlyWindow=1
-" show taglist at right hand side
-let Tlist_Use_Right_Window=1
-" Jump to taglist window on open
-let Tlist_GainFocus_On_ToggleOpen=1 
-" taglist window size
-let Tlist_WinWidth=35
+" F3 to open/close tagbar
+map <F3> :TagbarToggle<CR>
+" Jump to tagbar window on open
+let g:tagbar_autofocus = 1
+" If you set this option the Tagbar window will automatically close when you
+" jump to a tag
+let g:tagbar_autoclose = 0
+" Width of the Tagbar window in characters
+le g:tagbar_width = 35
 ```
 
 
@@ -239,4 +237,5 @@ let Tlist_WinWidth=35
 [3]: https://github.com/Valloric/YouCompleteMe
 [4]: https://github.com/vim-airline/vim-airline
 [5]: https://github.com/scrooloose/nerdtree
-[6]: https://github.com/vim-scripts/taglist.vim
+[6]: https://github.com/majutsushi/tagbar
+[7]: https://github.com/majutsushi/tagbar/blob/master/doc/tagbar.txt
