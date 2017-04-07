@@ -18,10 +18,7 @@ Vundle automatically...
 
 ### Where is .vimrc file?
 If you did not create .vimrc before, create one now.
-    ```
-    cd ~
-    touch .vimrc
-    ```
+    `touch ~/.vimrc`
 
 ### How to install Vundle
 1. create the directory if you did not create it before.
