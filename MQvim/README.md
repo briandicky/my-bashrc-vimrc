@@ -228,6 +228,39 @@ let g:tagbar_autoclose = 0
 le g:tagbar_width = 35
 ```
 
+## [ctrlp.vim][8] Fuzzy file, buffer, mru, tag, etc finder for vim
+ctrlp.vim is a full path fuzzy file, buffer, mru, tag, ... finder for vim.
+
+### Installation
+For Vundle manager, we install main tool by typing
+```
+Plugin 'ctrlpvim/ctrlp.vim'
+```
+
+Then, launch vim and run `:PluginInstall`.
+
+### Settings
+Below is my ctrl.vim settings, more details you can find [here][9].
+```vim
+" Use this option to change the mapping to invoke CtrlP in normal mode
+let g:ctrlp_map = '<leader>p'
+" Set the default opening command to use when pressing the above mapping
+let g:ctrlp_cmd = 'CtrlP'
+" F4 to open/close ctrl.vim
+map <F4> :CtrlPMRU<CR>
+"  Use this for files and directories you want only CtrlP to not show
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$'}
+" When starting up, CtrlP sets its local working directory
+let g:ctrlp_working_path_mode=0
+" Change the position, the listing order of results, the minimum and the maximum heights of the match window
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+" Specify the number of recently opened files you want CtrlP to remembe
+let g:ctrlp_mruf_max=500
+" Follow symbolic links or not
+let g:ctrlp_follow_symlinks=1
+```
 
 [1]: https://github.com/vim-airline/vim-airline-themes
 [2]: https://github.com/VundleVim/Vundle.vim
@@ -236,3 +269,5 @@ le g:tagbar_width = 35
 [5]: https://github.com/scrooloose/nerdtree
 [6]: https://github.com/majutsushi/tagbar
 [7]: https://github.com/majutsushi/tagbar/blob/master/doc/tagbar.txt
+[8]: https://github.com/ctrlpvim/ctrlp.vim
+[9]: https://github.com/ctrlpvim/ctrlp.vim/blob/master/doc/ctrlp.txt

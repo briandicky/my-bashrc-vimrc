@@ -78,6 +78,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'L9'
 
 " =============================================
@@ -143,3 +144,25 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 0
 " Width of the Tagbar window in characters
 le g:tagbar_width = 35
+
+""""""""""""""""""""""""""
+" settings for ctrl.vim
+""""""""""""""""""""""""""
+" Use this option to change the mapping to invoke CtrlP in normal mode
+let g:ctrlp_map = '<leader>p'
+" Set the default opening command to use when pressing the above mapping
+let g:ctrlp_cmd = 'CtrlP'
+" F4 to open/close ctrl.vim
+map <F4> :CtrlPMRU<CR>
+"  Use this for files and directories you want only CtrlP to not show
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$'}
+" When starting up, CtrlP sets its local working directory
+let g:ctrlp_working_path_mode=0
+" Change the position, the listing order of results, the minimum and the maximum heights of the match window
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+" Specify the number of recently opened files you want CtrlP to remembe
+let g:ctrlp_mruf_max=500
+" Follow symbolic links or not
+let g:ctrlp_follow_symlinks=1
