@@ -228,7 +228,7 @@ let g:tagbar_autoclose = 0
 le g:tagbar_width = 35
 ```
 
-## [ctrlp.vim][8] Fuzzy file, buffer, mru, tag, etc finder for vim
+## [ctrlp.vim][8], a fuzzy file, buffer, mru, tag, etc finder for vim
 ctrlp.vim is a full path fuzzy file, buffer, mru, tag, ... finder for vim.
 
 ### Installation
