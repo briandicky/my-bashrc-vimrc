@@ -268,7 +268,7 @@ The Vim interface, and a set of key mappings you may find useful, is documented 
 
 ### Installation
 Type this command in your terminal, it will automatically install cscope.
-```shell
+```vim
 sudo apt-get install cscope
 ```
 
