@@ -1,7 +1,7 @@
 # Vimrc guidelines
 This document briefly describe how to install plugin in vim environment.
 
-## [Vundle][2], the plug-in manager for Vim
+## [Vundle](https://github.com/VundleVim/Vundle.vim), the plug-in manager for Vim
 Vundle is short for Vim bundle and is a Vim plugin manager.
 It allows you to...
 * keep track of and configure your plugins right in the `.vimrc`
@@ -85,7 +85,7 @@ Put this at the top of your `.vimrc` to use Vundle. Remove plugins you don't nee
 Launch vim and run `:PluginInstall`
 To install from command line: `vim +PluginInstall +qall`
 
-## [YouCompleteMe][3], a code-completion engine for Vim
+## [YouCompleteMe](https://github.com/Valloric/YouCompleteMe), a code-completion engine for Vim
 YouCompleteMe is a fast, as-you-type, fuzzy-search code completion engine for Vim.
 Please refer to the full Installation Guide below, however, the following commands are provided on my own experience and may not work for you.
 
@@ -137,7 +137,7 @@ Before we start to use YouCompleteMe, we need to set a global variable to be the
     ```
 After you set this global variable to be the enyrt point for YCM, it will work successfully.
 
-## [Vim-airline][4], status/tabline for vim
+## [Vim-airline](https://github.com/vim-airline/vim-airline), status/tabline for vim
 Lean & mean status/tabline for vim that's light as air.
 
 ### Installation
@@ -146,7 +146,7 @@ For Vundle manager, we install main tool by typing
 Plugin 'vim-airline/vim-airline'
 ```
 
-If you want to install the themes as you would this plugin ([Vundle themes][1])
+If you want to install the themes as you would this plugin ([Vundle themes](https://github.com/vim-airline/vim-airline-themes))
 ```
 Plugin 'vim-airline/vim-airline-themes'
 ```
@@ -177,7 +177,7 @@ let g:airline_theme="simple"
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 ```
 
-## [NERDTree][5], a tree explorer plugin for vim
+## [NERDTree](https://github.com/scrooloose/nerdtree), a tree explorer plugin for vim
 The NERD tree allows you to explore your filesystem and to open files and directories.
 
 ### Installaltion
@@ -202,7 +202,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 let NERDTreeWinSize=25
 ```
 
-## [Tagbar][6], a class outline viewer for Vim
+## [Tagbar](https://github.com/majutsushi/tagbar), a class outline viewer for Vim
 Tagbar is a Vim plugin that provides an easy way to browse the tags of the current file and get an overview of its structure.
 It does this by creating a sidebar that displays the ctags-generated tags of the current file, ordered by their scope.
 
@@ -215,7 +215,7 @@ Plugin 'majutsushi/tagbar'
 Then, launch vim and run `:PluginInstall`.
 
 ### Settings
-Below is my Tagbar settings, more details you can find [here][7].
+Below is my Tagbar settings, more details you can find [here](https://github.com/majutsushi/tagbar/blob/master/doc/tagbar.txt).
 ```vim
 " F3 to open/close tagbar
 map <F3> :TagbarToggle<CR>
@@ -228,7 +228,7 @@ let g:tagbar_autoclose = 0
 le g:tagbar_width = 35
 ```
 
-## [ctrlp.vim][8], a fuzzy file, buffer, mru, tag, etc finder for vim
+## [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim), a fuzzy file, buffer, mru, tag, etc finder for vim
 ctrlp.vim is a full path fuzzy file, buffer, mru, tag, ... finder for vim.
 
 ### Installation
@@ -240,7 +240,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Then, launch vim and run `:PluginInstall`.
 
 ### Settings
-Below is my ctrl.vim settings, more details you can find [here][9].
+Below is my ctrl.vim settings, more details you can find [here](https://github.com/ctrlpvim/ctrlp.vim/blob/master/doc/ctrlp.txt).
 ```vim
 " Use this option to change the mapping to invoke CtrlP in normal mode
 let g:ctrlp_map = '<leader>p'
@@ -261,13 +261,3 @@ let g:ctrlp_mruf_max=500
 " Follow symbolic links or not
 let g:ctrlp_follow_symlinks=1
 ```
-
-[1]: https://github.com/vim-airline/vim-airline-themes
-[2]: https://github.com/VundleVim/Vundle.vim
-[3]: https://github.com/Valloric/YouCompleteMe
-[4]: https://github.com/vim-airline/vim-airline
-[5]: https://github.com/scrooloose/nerdtree
-[6]: https://github.com/majutsushi/tagbar
-[7]: https://github.com/majutsushi/tagbar/blob/master/doc/tagbar.txt
-[8]: https://github.com/ctrlpvim/ctrlp.vim
-[9]: https://github.com/ctrlpvim/ctrlp.vim/blob/master/doc/ctrlp.txt
