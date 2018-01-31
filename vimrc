@@ -17,7 +17,7 @@ set expandtab
 syntax on
 
 " fix mac vim delete error, so as set backspace=indent,eol,start
-set backspace=2
+"set backspace=2
 
 " enable filetype detection:
 filetype on
@@ -41,7 +41,7 @@ autocmd BufRead *.tex nnoremap <F8> :setl noai nocin nosi inde=<CR>
 " For *.tex, *.md, and *.txt files, open spell checker automatically
 if has("spell")
   " turn spelling on by default
-  autocmd BufRead *.txt,*.md,*.tex set spell
+  autocmd BufRead *.txt,*.md,*.tex,*.html set spell
   " set spell
 
   " toggle spelling with F4 key
@@ -102,7 +102,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extr
 " <Enter> used to select the completion string without newline
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 " seed its identifier database with the keywords of the programming language you're writing
-let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_seed_identifiers_with_syntax = 1
 " show the completion menu even when typing inside comments
 let g:ycm_complete_in_comments = 1
 
