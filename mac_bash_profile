@@ -1,0 +1,43 @@
+#  ---------------------------------------------------------------------------
+#
+#  Description:  This file holds all my BASH configurations and aliases
+#
+#  Sections:
+#  1.  Environment Configuration
+#  2.  Make Terminal Better (remapping defaults and adding functionality)
+#  3.  File and Folder Management
+#  4.  Searching
+#  5.  Process Management
+#  6.  Networking
+#  7.  System Operations & Information
+#  8.  Web Development
+#  9.  Reminders & Notes
+#
+#  ---------------------------------------------------------------------------
+
+
+#   -------------------------------
+#   1. ENVIRONMENT CONFIGURATION
+#   -------------------------------
+
+#   Set Paths
+#   ------------------------------------------------------------
+    export PATH="$PATH:/usr/local/bin/"
+    export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+
+    # added by Anaconda3 4.4.0 installer
+    export PATH="/Users/mosquito/anaconda/bin:$PATH"
+
+#   Set Default Editor
+#   ------------------------------------------------------------
+    export EDITOR="/usr/local/bin/vim"
+    export SVN_EDITOR="/usr/local/bin/vim"
+
+#   Set default blocksize for ls, df, du
+#   ------------------------------------------------------------
+    #export BLOCKSIZE=1k
+
+#   Add color to terminal
+#   ------------------------------------------------------------
+    export CLICOLOR=1
+    export LSCOLORS=ExFxBxDxCxegedabagacad
