@@ -28,6 +28,10 @@ filetype indent on
 set tabstop=4
 set shiftwidth=4
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " in makefiles, don't expand tabs to spaces, since actual tab characters are
 " needed, and have indentation at 8 chars to be sure that all indents are tabs
 " (despite the mappings later):
@@ -98,7 +102,7 @@ filetype plugin indent on
 " settins for YCM
 """""""""""""""""""""""""" 
 " set a global var to be the entry point of YCM for all code
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " <Enter> used to select the completion string without newline
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 " seed its identifier database with the keywords of the programming language you're writing
