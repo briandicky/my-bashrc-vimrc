@@ -186,3 +186,45 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_mruf_max=500
 " Follow symbolic links or not
 let g:ctrlp_follow_symlinks=1
+
+" This tests to see if vim was configured with the '--enable-cscope' option
+" when it was compiled.  If it wasn't, time to recompile vim..
+if has("cscope")
+    " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
+    set cscopetag
+
+    " check cscope for definition of a symbol before checking ctags: set to 1
+    " if you want the reverse search order.
+    set csto=0
+
+    " add any cscope database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+
+    " else add the database pointed to by environment variable 
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+
+    " show msg when any other cscope db added
+    set cscopeverbose
+
+    " The following maps all invoke one of the following cscope search types:
+    "
+    "   's'   symbol: find all references to the token under cursor
+    "   'g'   global: find global definition(s) of the token under cursor
+    "   'c'   calls:  find all calls to the function name under cursor
+    "   't'   text:   find all instances of the text under cursor
+    "   'e'   egrep:  egrep search for the word under cursor
+    "   'f'   file:   open the filename under cursor
+    "   'i'   includes: find files that include the filename under cursor
+    "   'd'   called: find functions that function under cursor calls
+    nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+endif
