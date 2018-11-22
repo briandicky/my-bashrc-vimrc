@@ -12,6 +12,7 @@ set nu
 set ai
 set bg=dark
 set cursorline
+set hlsearch
 set ruler
 set expandtab
 syntax on
