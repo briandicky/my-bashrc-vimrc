@@ -12,9 +12,10 @@ set nu
 set ai
 set bg=dark
 set cursorline
-set hlsearch
 set ruler
 set expandtab
+set hlsearch
+set ignorecase
 syntax on
 
 " fix mac vim delete error, so as set backspace=indent,eol,start
@@ -81,7 +82,7 @@ call vundle#begin()
 " =============================================
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -102,14 +103,14 @@ filetype plugin indent on
 """""""""""""""""""""""""" 
 " settins for YCM
 """""""""""""""""""""""""" 
-" set a global var to be the entry point of YCM for all code
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-" <Enter> used to select the completion string without newline
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-" seed its identifier database with the keywords of the programming language you're writing
-" let g:ycm_seed_identifiers_with_syntax = 1
-" show the completion menu even when typing inside comments
-let g:ycm_complete_in_comments = 1
+"" set a global var to be the entry point of YCM for all code
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"" <Enter> used to select the completion string without newline
+"inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+"" seed its identifier database with the keywords of the programming language you're writing
+"" let g:ycm_seed_identifiers_with_syntax = 1
+"" show the completion menu even when typing inside comments
+"let g:ycm_complete_in_comments = 1
 
 
 """"""""""""""""""""""""""
