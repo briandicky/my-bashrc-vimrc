@@ -59,8 +59,18 @@ if has("spell")
   " limit it to just the top 10 items
   " set sps=best,10                    
 endif
+
+" Save with sripping trailing spaces
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre *.h,*.c,*.java :call <SID>StripTrailingWhitespaces()
+
 " =============================================
-" End of normal settins
+" End of normal settings
 " =============================================
 
 
