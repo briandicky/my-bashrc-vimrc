@@ -44,11 +44,12 @@ autocmd FileType makefile set noexpandtab shiftwidth=8 softtabstop=0
 autocmd BufRead *.tex set noautoindent nocindent nosmartindent indentexpr=
 autocmd BufRead *.tex nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
-" For *.tex, *.md, and *.txt files, open spell checker automatically
+" For *.tex, *.md, *.txt, markdown, and gitcommit files, open spell checker automatically
 if has("spell")
-  " turn spelling on by default
+  " turn on spell checker when open following files
   autocmd BufRead *.txt,*.md,*.tex,*.html set spell
-  " set spell
+  autocmd FileType markdown set spell
+  autocmd FileType gitcommit set spell
 
   " toggle spelling with F4 key
   " map <F4> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
